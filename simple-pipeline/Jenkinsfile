@@ -5,7 +5,7 @@ pipeline {
     }
     agent {
       node {
-        // TODO: run this simple pipeline on jenkins 'master' node
+        label 'master'
       }
     }
 
@@ -21,12 +21,6 @@ pipeline {
                     }
                 }
             }
-        }
-
-        agent {
-           node {
-              label 'master'
-           }
         }
 
         stage('stage 2') {
